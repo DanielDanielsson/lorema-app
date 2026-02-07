@@ -36,17 +36,13 @@ jobs:
             -configuration Release \
             -archivePath build/Lorema.xcarchive \
             archive \
-            CODE_SIGN_IDENTITY="Lorema Development"
+            CODE_SIGN_IDENTITY="-"
 
-      - name: Re-sign app bundle
-        run: |
-          codesign --force --deep --sign "Lorema Development" \
-            build/Lorema.xcarchive/Products/Applications/Lorema.app
-
-      - name: Export app
+      - name: Export and sign app
         run: |
           mkdir -p build/export
           cp -R build/Lorema.xcarchive/Products/Applications/Lorema.app build/export/
+          codesign --force --deep --sign "Lorema Development" build/export/Lorema.app
 
       - name: Create zip
         run: |
