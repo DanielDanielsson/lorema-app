@@ -21,6 +21,10 @@ Lorema works at the OS level. Same trigger, same behavior, every app. Type `lore
 
 One tool. Works everywhere. 
 
+## Why Lorem Ipsum?
+
+Lorem Ipsum works because your brain recognizes it instantly as meaningless. You see "Lorem ipsum" and you stop reading. That's the whole point. Your eyes move on to what actually matters: the layout, the spacing, the typography. Use real looking text and people will read it. Use gibberish that announces itself as gibberish and they won't.
+
 ## How it works
 
 Lorema sits in your menu bar and listens for trigger words as you type. When it detects a prefix followed by a number and a space, it replaces what you typed with generated placeholder text. Works in any app.
