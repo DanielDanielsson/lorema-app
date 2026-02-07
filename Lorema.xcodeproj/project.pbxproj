@@ -1,0 +1,581 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D2729720284A21AA00D62869 /* LaunchAtLogin in Frameworks */ = {isa = PBXBuildFile; productRef = D272971F284A21AA00D62869 /* LaunchAtLogin */; };
+		D297540E285504C8001EEDCA /* CGEventTapAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D297540D285504C8001EEDCA /* CGEventTapAction.swift */; };
+		D2A47DFD280FEBC6001392D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A47DFC280FEBC6001392D2 /* AppDelegate.swift */; };
+		D2A47E01280FEBC9001392D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2A47E00280FEBC9001392D2 /* Assets.xcassets */; };
+		D2A47E04280FEBC9001392D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2A47E02280FEBC9001392D2 /* Main.storyboard */; };
+		D2A47E2D2810327C001392D2 /* LoremaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A47E2C2810327C001392D2 /* LoremaModel.swift */; };
+		D2A47E2F281033A4001392D2 /* Structures.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A47E2E281033A4001392D2 /* Structures.swift */; };
+		D2A47E3328107D02001392D2 /* LoadableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A47E3228107D02001392D2 /* LoadableView.swift */; };
+		D2A47E3928107F76001392D2 /* InstructionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A47E3828107F76001392D2 /* InstructionsView.swift */; };
+		D2A47E3F281485B6001392D2 /* InstructionsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2A47E3E281485B6001392D2 /* InstructionsView.xib */; };
+		D2A47E58281DB3A4001392D2 /* NoPermissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A47E57281DB3A4001392D2 /* NoPermissionView.swift */; };
+		D2A47E5A281DB4DD001392D2 /* NoPermissionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2A47E59281DB4DD001392D2 /* NoPermissionView.xib */; };
+		D2CAB657283A13200052426F /* PreferencesWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CAB656283A13200052426F /* PreferencesWindowController.swift */; };
+		D2CAB65A283A16A40052426F /* Preferencess.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2CAB659283A16A40052426F /* Preferencess.storyboard */; };
+		D2CAB65C283A180E0052426F /* PreferencesViewControllerr.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CAB65B283A180E0052426F /* PreferencesViewControllerr.swift */; };
+		AA000001000000000000000A /* TextGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000001000000000000000F /* TextGenerator.swift */; };
+		AA000002000000000000000A /* TextGeneratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000002000000000000000F /* TextGeneratorTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AA000003000000000000000A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D2A47DF1280FEBC6001392D2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D2A47DF8280FEBC6001392D2;
+			remoteInfo = Lorema;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D297540D285504C8001EEDCA /* CGEventTapAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGEventTapAction.swift; sourceTree = "<group>"; };
+		D2A47DF9280FEBC6001392D2 /* Lorema.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lorema.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2A47DFC280FEBC6001392D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D2A47E00280FEBC9001392D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D2A47E03280FEBC9001392D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D2A47E05280FEBC9001392D2 /* Lorema.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Lorema.entitlements; sourceTree = "<group>"; };
+		D2A47E2C2810327C001392D2 /* LoremaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoremaModel.swift; sourceTree = "<group>"; };
+		D2A47E2E281033A4001392D2 /* Structures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Structures.swift; sourceTree = "<group>"; };
+		D2A47E302810654D001392D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		D2A47E3228107D02001392D2 /* LoadableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadableView.swift; sourceTree = "<group>"; };
+		D2A47E3828107F76001392D2 /* InstructionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionsView.swift; sourceTree = "<group>"; };
+		D2A47E3E281485B6001392D2 /* InstructionsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InstructionsView.xib; sourceTree = "<group>"; };
+		D2A47E57281DB3A4001392D2 /* NoPermissionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoPermissionView.swift; sourceTree = "<group>"; };
+		D2A47E59281DB4DD001392D2 /* NoPermissionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoPermissionView.xib; sourceTree = "<group>"; };
+		D2CAB656283A13200052426F /* PreferencesWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesWindowController.swift; sourceTree = "<group>"; };
+		D2CAB659283A16A40052426F /* Preferencess.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Preferencess.storyboard; sourceTree = "<group>"; };
+		D2CAB65B283A180E0052426F /* PreferencesViewControllerr.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesViewControllerr.swift; sourceTree = "<group>"; };
+		AA000001000000000000000F /* TextGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextGenerator.swift; sourceTree = "<group>"; };
+		AA000002000000000000000F /* TextGeneratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextGeneratorTests.swift; sourceTree = "<group>"; };
+		AA000004000000000000000F /* LoremaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LoremaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D2A47DF6280FEBC6001392D2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2729720284A21AA00D62869 /* LaunchAtLogin in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA000005000000000000000A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D2A47DF0280FEBC6001392D2 = {
+			isa = PBXGroup;
+			children = (
+				D2A47DFB280FEBC6001392D2 /* Lorema */,
+				AA000006000000000000000A /* LoremaTests */,
+				D2A47DFA280FEBC6001392D2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D2A47DFA280FEBC6001392D2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D2A47DF9280FEBC6001392D2 /* Lorema.app */,
+				AA000004000000000000000F /* LoremaTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D2A47DFB280FEBC6001392D2 /* Lorema */ = {
+			isa = PBXGroup;
+			children = (
+				D2A47DFC280FEBC6001392D2 /* AppDelegate.swift */,
+				D2A47E2C2810327C001392D2 /* LoremaModel.swift */,
+				AA000001000000000000000F /* TextGenerator.swift */,
+				D2A47E2E281033A4001392D2 /* Structures.swift */,
+				D297540D285504C8001EEDCA /* CGEventTapAction.swift */,
+				D2A47E02280FEBC9001392D2 /* Main.storyboard */,
+				D2CAB658283A164D0052426F /* PreferencesWindow */,
+				D2A47E3128107CDB001392D2 /* Custom Views */,
+				D2A47E00280FEBC9001392D2 /* Assets.xcassets */,
+				D2A47E05280FEBC9001392D2 /* Lorema.entitlements */,
+				D2A47E302810654D001392D2 /* Info.plist */,
+			);
+			path = Lorema;
+			sourceTree = "<group>";
+		};
+		D2A47E3128107CDB001392D2 /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+				D2A47E3228107D02001392D2 /* LoadableView.swift */,
+				D2A47E3828107F76001392D2 /* InstructionsView.swift */,
+				D2A47E3E281485B6001392D2 /* InstructionsView.xib */,
+				D2A47E57281DB3A4001392D2 /* NoPermissionView.swift */,
+				D2A47E59281DB4DD001392D2 /* NoPermissionView.xib */,
+			);
+			path = "Custom Views";
+			sourceTree = "<group>";
+		};
+		D2CAB658283A164D0052426F /* PreferencesWindow */ = {
+			isa = PBXGroup;
+			children = (
+				D2CAB659283A16A40052426F /* Preferencess.storyboard */,
+				D2CAB65B283A180E0052426F /* PreferencesViewControllerr.swift */,
+				D2CAB656283A13200052426F /* PreferencesWindowController.swift */,
+			);
+			path = PreferencesWindow;
+			sourceTree = "<group>";
+		};
+		AA000006000000000000000A /* LoremaTests */ = {
+			isa = PBXGroup;
+			children = (
+				AA000002000000000000000F /* TextGeneratorTests.swift */,
+			);
+			path = LoremaTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D2A47DF8280FEBC6001392D2 /* Lorema */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D2A47E08280FEBC9001392D2 /* Build configuration list for PBXNativeTarget "Lorema" */;
+			buildPhases = (
+				D2A47DF5280FEBC6001392D2 /* Sources */,
+				D2A47DF6280FEBC6001392D2 /* Frameworks */,
+				D2A47DF7280FEBC6001392D2 /* Resources */,
+				D272971D284A214F00D62869 /* Copy "Launch at Login Helper" */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Lorema;
+			packageProductDependencies = (
+				D272971F284A21AA00D62869 /* LaunchAtLogin */,
+			);
+			productName = Lorema;
+			productReference = D2A47DF9280FEBC6001392D2 /* Lorema.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AA000007000000000000000A /* LoremaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AA000008000000000000000A /* Build configuration list for PBXNativeTarget "LoremaTests" */;
+			buildPhases = (
+				AA000009000000000000000A /* Sources */,
+				AA000005000000000000000A /* Frameworks */,
+				AA00000A000000000000000A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AA00000B000000000000000A /* PBXTargetDependency */,
+			);
+			name = LoremaTests;
+			productName = LoremaTests;
+			productReference = AA000004000000000000000F /* LoremaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D2A47DF1280FEBC6001392D2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					D2A47DF8280FEBC6001392D2 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					AA000007000000000000000A = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = D2A47DF8280FEBC6001392D2;
+					};
+				};
+			};
+			buildConfigurationList = D2A47DF4280FEBC6001392D2 /* Build configuration list for PBXProject "Lorema" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D2A47DF0280FEBC6001392D2;
+			packageReferences = (
+				D272971E284A21AA00D62869 /* XCRemoteSwiftPackageReference "LaunchAtLogin" */,
+			);
+			productRefGroup = D2A47DFA280FEBC6001392D2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D2A47DF8280FEBC6001392D2 /* Lorema */,
+				AA000007000000000000000A /* LoremaTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D2A47DF7280FEBC6001392D2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2A47E01280FEBC9001392D2 /* Assets.xcassets in Resources */,
+				D2CAB65A283A16A40052426F /* Preferencess.storyboard in Resources */,
+				D2A47E5A281DB4DD001392D2 /* NoPermissionView.xib in Resources */,
+				D2A47E04280FEBC9001392D2 /* Main.storyboard in Resources */,
+				D2A47E3F281485B6001392D2 /* InstructionsView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA00000A000000000000000A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D272971D284A214F00D62869 /* Copy "Launch at Login Helper" */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Copy \"Launch at Login Helper\"";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${BUILT_PRODUCTS_DIR}/LaunchAtLogin_LaunchAtLogin.bundle/Contents/Resources/copy-helper-swiftpm.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D2A47DF5280FEBC6001392D2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2A47E3928107F76001392D2 /* InstructionsView.swift in Sources */,
+				D2A47E58281DB3A4001392D2 /* NoPermissionView.swift in Sources */,
+				D2A47E3328107D02001392D2 /* LoadableView.swift in Sources */,
+				D2A47DFD280FEBC6001392D2 /* AppDelegate.swift in Sources */,
+				D297540E285504C8001EEDCA /* CGEventTapAction.swift in Sources */,
+				D2CAB65C283A180E0052426F /* PreferencesViewControllerr.swift in Sources */,
+				D2A47E2D2810327C001392D2 /* LoremaModel.swift in Sources */,
+				D2CAB657283A13200052426F /* PreferencesWindowController.swift in Sources */,
+				D2A47E2F281033A4001392D2 /* Structures.swift in Sources */,
+				AA000001000000000000000A /* TextGenerator.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA000009000000000000000A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA000002000000000000000A /* TextGeneratorTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AA00000B000000000000000A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D2A47DF8280FEBC6001392D2 /* Lorema */;
+			targetProxy = AA000003000000000000000A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D2A47E02280FEBC9001392D2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D2A47E03280FEBC9001392D2 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D2A47E06280FEBC9001392D2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D2A47E07280FEBC9001392D2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		D2A47E09280FEBC9001392D2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Lorema/Lorema.entitlements;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Lorema/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.danieldanielsson.Lorema;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		D2A47E0A280FEBC9001392D2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Lorema/Lorema.entitlements;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Lorema/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.danieldanielsson.Lorema;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		AA00000C000000000000000A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.danieldanielsson.LoremaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Lorema.app/Contents/MacOS/Lorema";
+			};
+			name = Debug;
+		};
+		AA00000D000000000000000A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.danieldanielsson.LoremaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Lorema.app/Contents/MacOS/Lorema";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D2A47DF4280FEBC6001392D2 /* Build configuration list for PBXProject "Lorema" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D2A47E06280FEBC9001392D2 /* Debug */,
+				D2A47E07280FEBC9001392D2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D2A47E08280FEBC9001392D2 /* Build configuration list for PBXNativeTarget "Lorema" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D2A47E09280FEBC9001392D2 /* Debug */,
+				D2A47E0A280FEBC9001392D2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AA000008000000000000000A /* Build configuration list for PBXNativeTarget "LoremaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA00000C000000000000000A /* Debug */,
+				AA00000D000000000000000A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D272971E284A21AA00D62869 /* XCRemoteSwiftPackageReference "LaunchAtLogin" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sindresorhus/LaunchAtLogin";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D272971F284A21AA00D62869 /* LaunchAtLogin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D272971E284A21AA00D62869 /* XCRemoteSwiftPackageReference "LaunchAtLogin" */;
+			productName = LaunchAtLogin;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = D2A47DF1280FEBC6001392D2 /* Project object */;
+}
