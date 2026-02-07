@@ -92,11 +92,11 @@ Lorema needs Accessibility permission to detect keystrokes and insert text.
 2. Click **+** and add **Lorema**
 3. Make sure the toggle is enabled
 
-### Unsigned app warning
+### Allowing the app to open
 
 Lorema is not signed with an Apple Developer certificate, so macOS will block it on first launch.
 
-**To open it:** Right-click Lorema.app and select **Open**, then click **Open** in the dialog. Alternatively, go to **System Settings > Privacy & Security** and click **Open Anyway**.
+**To open it:** Go to **System Settings > Privacy & Security**, scroll down, and click **Open Anyway** next to the Lorema warning.
 
 You only need to do this once.
 
