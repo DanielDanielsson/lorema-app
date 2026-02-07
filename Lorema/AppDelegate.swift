@@ -11,7 +11,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @IBOutlet weak var menu: NSMenu?
     @IBOutlet weak var firstMenuItem: NSMenuItem?
     @IBAction func openURL(_ sender: AnyObject) {
-        NSWorkspace.shared.open(NSURL(string: "https://lorema.app")! as URL)
+        NSWorkspace.shared.open(NSURL(string: "https://github.com/DanielDanielsson/lorema-app")! as URL)
     }
     
     @IBAction func showPreferences(_ sender: Any) {
