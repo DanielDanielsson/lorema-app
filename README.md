@@ -15,7 +15,7 @@
 
 ## Why?
 
-Every design tool, code editor, and browser extension has its own way of generating Lorem Ipsum. Figma has a plugin. VSCode has a snippet. Chrome has seventeen extensions that all do it slightly differently. You end up memorizing a different shortcut for every app, or worse, googling "lorem ipsum generator" and copy-pasting from some ad-infested website like it's 2007. Or even worse, you type "text text text" and copy-paste that a billion times. I know, we've all been there. 
+Every design tool, code editor, and browser extension has its own way of generating Lorem Ipsum. Figma has a plugin. VSCode has a snippet. Chrome has seventeen extensions that all do it slightly differently. You end up memorizing a different shortcut for every app, or worse, googling "lorem ipsum generator" and copy-pasting from some ad-infested website like it's 2007. Or even worse, you type "text text text" and copy-paste that a billion times. We've all been there. 
 
 Lorema works at the OS level. Same trigger, same behavior, every app. Type `lorem50`, hit space, done. Whether you're in Figma, VSCode or any CMS.
 
