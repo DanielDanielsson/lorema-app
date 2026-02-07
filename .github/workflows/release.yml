@@ -1,0 +1,63 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  build-and-release:
+    runs-on: macos-14
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build archive
+        run: |
+          xcodebuild \
+            -project Lorema.xcodeproj \
+            -scheme Lorema \
+            -configuration Release \
+            -archivePath build/Lorema.xcarchive \
+            archive \
+            CODE_SIGN_IDENTITY="-" \
+            CODE_SIGNING_ALLOWED=NO
+
+      - name: Export app
+        run: |
+          mkdir -p build/export
+          cp -R build/Lorema.xcarchive/Products/Applications/Lorema.app build/export/
+
+      - name: Create zip
+        run: |
+          cd build/export
+          zip -r ../../lorema-macos.zip Lorema.app
+
+      - name: Compute SHA256
+        id: sha
+        run: |
+          SHA=$(shasum -a 256 lorema-macos.zip | awk '{print $1}')
+          echo "sha256=$SHA" >> "$GITHUB_OUTPUT"
+          echo "SHA256: $SHA"
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: lorema-macos.zip
+          body: |
+            ## Lorema ${{ github.ref_name }}
+
+            ### Installation
+
+            ```bash
+            brew tap DanielDanielsson/lorema
+            brew install --cask lorema
+            ```
+
+            ### SHA256
+            ```
+            ${{ steps.sha.outputs.sha256 }}
+            ```
+          draft: false
+          prerelease: false
