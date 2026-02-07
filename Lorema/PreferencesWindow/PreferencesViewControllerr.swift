@@ -1,5 +1,4 @@
 import Cocoa
-import ServiceManagement
 import LaunchAtLogin
 
 class PreferencesViewControllerr: NSViewController {
@@ -47,10 +46,6 @@ class PreferencesViewControllerr: NSViewController {
         }
     }
 
-    override func viewDidAppear() {
-        super.viewDidAppear()
-    }
-    
     func setTexts() {
         prefixInstructionTextLorem.stringValue = "Prefix for text starting with \"Lorem ipsum\":"
         prefixInstructionTextLora.stringValue = "Prefix for random text:"
@@ -76,9 +71,6 @@ class PreferencesViewControllerr: NSViewController {
        return Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String
     }
     
-    static var buildVersion: String? {
-       return Bundle.main.object(forInfoDictionaryKey: "CFBundleVersion") as? String
-    }
 }
 
 // MARK: - Extension text field delegate
