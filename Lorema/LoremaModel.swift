@@ -1,64 +1,70 @@
-import SwiftUI
+import Cocoa
 import Foundation
 
-class LoremaModel: ObservableObject{
-    
-    @Published var text = ""
+class LoremaModel {
+
     static let sharedInstance = LoremaModel()
     var CGEventTap = CGEventTapAction()
-    
-    var currentLoremPrefix : String = UserDefaults.standard.value(forKey: "loPrefix") == nil ? Structures.LOREM_TP : UserDefaults.standard.value(forKey: "loPrefix") as! String
-    
-    var currentLoraPrefix : String = UserDefaults.standard.value(forKey: "laPrefix") == nil ? Structures.LORA_TP : UserDefaults.standard.value(forKey: "laPrefix") as! String
-    
+
+    var currentLoremPrefix: String = UserDefaults.standard.value(forKey: "loPrefix") == nil ? Structures.LOREM_TP : UserDefaults.standard.value(forKey: "loPrefix") as! String {
+        didSet { rebuildRegexes() }
+    }
+
+    var currentLoraPrefix: String = UserDefaults.standard.value(forKey: "laPrefix") == nil ? Structures.LORA_TP : UserDefaults.standard.value(forKey: "laPrefix") as! String {
+        didSet { rebuildRegexes() }
+    }
+
+    private var loremRegex: NSRegularExpression?
+    private var loraRegex: NSRegularExpression?
+
     // MARK: - Init
-    init(){
-        
+    init() {
+        rebuildRegexes()
+
         NotificationCenter.default.addObserver(self, selector: #selector(handleDidChangePrefix(notification:)), name: NSNotification.Name(rawValue: "didChangePrefixes"), object: nil)
-        
+
         CGEventTap.start { text in
-            self.text = text
-            self.matchSnippet()
+            self.matchSnippet(text)
         }
     }
-    
+
+    private func rebuildRegexes() {
+        let loremPattern = "\(currentLoremPrefix)+(?:[1-9][0-9]*){1,\(Structures.MAX_NUMBER_LENGTH)}+[ ]"
+        let loraPattern = "\(currentLoraPrefix)+(?:[1-9][0-9]*){1,\(Structures.MAX_NUMBER_LENGTH)}+[ ]"
+        loremRegex = try? NSRegularExpression(pattern: loremPattern)
+        loraRegex = try? NSRegularExpression(pattern: loraPattern)
+    }
+
     @objc func handleDidChangePrefix(notification: Notification) {
         if let preferredLorem = UserDefaults.standard.value(forKey: "loPrefix") as? String {
-            
-            
-            
             currentLoremPrefix = preferredLorem
         }
         if let preferredLora = UserDefaults.standard.value(forKey: "laPrefix") as? String {
             currentLoraPrefix = preferredLora
         }
     }
-    
+
     // MARK: - Match expressions
-    func matchSnippet(){
-        
-        if(self.text.range(of: "\(String(describing: currentLoremPrefix))+(?:[1-9][0-9]*){1,\(Structures.MAX_NUMBER_LENGTH)}+[ ]", options: .regularExpression) != nil ){
-            if let number = Int.parse(from: String(self.text.components(separatedBy: currentLoremPrefix).last!)) {
-                insertText(number, currentLoremPrefix as String)
+    func matchSnippet(_ text: String) {
+        let range = NSRange(text.startIndex..., in: text)
+
+        if let regex = loremRegex, regex.firstMatch(in: text, range: range) != nil {
+            if let number = Int.parse(from: String(text.components(separatedBy: currentLoremPrefix).last!)) {
+                insertText(number, currentLoremPrefix)
             }
-        }
-        
-        else if(self.text.range(of: "\(String(describing: currentLoraPrefix))+(?:[1-9][0-9]*){1,\(Structures.MAX_NUMBER_LENGTH)}+[ ]", options: .regularExpression) != nil ){
-            
-            if let number = Int.parse(from: String(self.text.components(separatedBy: currentLoraPrefix).last!)) {
-                insertText(number, currentLoraPrefix as String)
+        } else if let regex = loraRegex, regex.firstMatch(in: text, range: range) != nil {
+            if let number = Int.parse(from: String(text.components(separatedBy: currentLoraPrefix).last!)) {
+                insertText(number, currentLoraPrefix)
             }
         }
     }
-    
-    // MARK: - Insert text
-    func insertText(_ amountOfWords: Int,_ type: String ){
-        let charactersToDelete : Int = numberOfDigits(amountOfWords) + type.count + 1;
 
-        var i : Int = 0
-        while (i < charactersToDelete) {
+    // MARK: - Insert text
+    func insertText(_ amountOfWords: Int, _ type: String) {
+        let charactersToDelete: Int = numberOfDigits(amountOfWords) + type.count + 1
+
+        for _ in 0..<charactersToDelete {
             self.delete()
-            i += 1
         }
 
         let mode: GenerationMode = (type == currentLoremPrefix) ? .lorem : .random
@@ -74,7 +80,7 @@ class LoremaModel: ObservableObject{
             }
         }
     }
-    
+
     // MARK: - Hit delete key
     func delete() {
         let eventSource = CGEventSource(stateID: .combinedSessionState)
@@ -94,35 +100,34 @@ class LoremaModel: ObservableObject{
         keyDownEvent?.post(tap: loc)
         keyUpEvent?.post(tap: loc)
     }
-    
+
     // MARK: - Hit cmd + v
     func paste() {
-
         let keyCode = CGKeyCode(9)
-
         let eventSource = CGEventSource(stateID: .combinedSessionState)
 
         let keyDownEvent = CGEvent(
             keyboardEventSource: eventSource,
-            virtualKey:  keyCode,
+            virtualKey: keyCode,
             keyDown: true)
 
         keyDownEvent?.flags.insert(.maskCommand)
 
         let keyUpEvent = CGEvent(
             keyboardEventSource: eventSource,
-            virtualKey:  keyCode,
+            virtualKey: keyCode,
             keyDown: false)
 
         keyDownEvent?.post(tap: .cghidEventTap)
         keyUpEvent?.post(tap: .cghidEventTap)
     }
+
     // MARK: - Number of digits
     func numberOfDigits(_ number: Int) -> Int {
         if number < 10 && number >= 0 || number > -10 && number < 0 {
             return 1
         } else {
-            return 1 + numberOfDigits(number/10)
+            return 1 + numberOfDigits(number / 10)
         }
     }
 }
@@ -134,4 +139,3 @@ extension Int {
         return Int(string.components(separatedBy: CharacterSet.decimalDigits.inverted).joined())
     }
 }
-
