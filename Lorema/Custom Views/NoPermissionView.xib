@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="20037" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="20037"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="NoPermissionView" customModule="Lorema" customModuleProvider="target">
+            <connections>
+                <outlet property="instructionText" destination="HaY-8P-Icv" id="OL4-Gb-DOU"/>
+                <outlet property="settingsPathText" destination="xgP-Wb-3fC" id="SVP-CL-sJK"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="c22-O7-iKe" customClass="NoPermissionView" customModule="Lorema" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="370" height="200"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="HaY-8P-Icv">
+                    <rect key="frame" x="10" y="172" width="350" height="16"/>
+                    <textFieldCell key="cell" alignment="center" title="NoPermissionInfo" id="vYI-Zt-rvU">
+                        <font key="font" usesAppearanceFont="YES"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="FJl-zD-VRa">
+                    <rect key="frame" x="125" y="18" width="120" height="32"/>
+                    <buttonCell key="cell" type="push" title="Go to settings" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="YoC-nW-Rpg">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="goToSettings:" target="-2" id="TCm-R9-uOx"/>
+                    </connections>
+                </button>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="xgP-Wb-3fC">
+                    <rect key="frame" x="18" y="136" width="334" height="16"/>
+                    <textFieldCell key="cell" alignment="center" title="PermissionPath" id="zf8-F1-2UW">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+            </subviews>
+            <constraints>
+                <constraint firstItem="HaY-8P-Icv" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" constant="12" id="7vR-h6-8nq"/>
+                <constraint firstAttribute="bottom" secondItem="FJl-zD-VRa" secondAttribute="bottom" constant="25" id="887-ii-GXZ"/>
+                <constraint firstItem="xgP-Wb-3fC" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" constant="20" id="B6F-Ec-cGi"/>
+                <constraint firstAttribute="trailing" secondItem="HaY-8P-Icv" secondAttribute="trailing" constant="12" id="EpL-sZ-cVo"/>
+                <constraint firstAttribute="trailing" secondItem="xgP-Wb-3fC" secondAttribute="trailing" constant="20" id="HgL-R5-4f4"/>
+                <constraint firstItem="HaY-8P-Icv" firstAttribute="centerX" secondItem="c22-O7-iKe" secondAttribute="centerX" id="XsY-ON-2Ua"/>
+                <constraint firstItem="xgP-Wb-3fC" firstAttribute="top" secondItem="HaY-8P-Icv" secondAttribute="bottom" constant="20" id="dU6-5y-bCN"/>
+                <constraint firstItem="HaY-8P-Icv" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" constant="12" id="mhD-14-C19"/>
+                <constraint firstItem="FJl-zD-VRa" firstAttribute="centerX" secondItem="c22-O7-iKe" secondAttribute="centerX" id="sEp-OZ-hdL"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="182"/>
+        </customView>
+    </objects>
+</document>

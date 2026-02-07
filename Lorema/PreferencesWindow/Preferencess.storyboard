@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="xi8-tk-H0h">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="20037"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Window Controller-->
+        <scene sceneID="aRN-Iz-KMa">
+            <objects>
+                <windowController id="xi8-tk-H0h" customClass="PreferencesWindowController" customModule="Lorema" customModuleProvider="target" sceneMemberID="viewController">
+                    <window key="window" title="Lorema Preferences" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="a05-4X-jfn">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
+                        <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+                        <rect key="contentRect" x="245" y="301" width="480" height="270"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1025"/>
+                        <view key="contentView" id="vMM-yM-JXM">
+                            <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </view>
+                        <connections>
+                            <outlet property="delegate" destination="xi8-tk-H0h" id="dRd-mQ-SvZ"/>
+                        </connections>
+                    </window>
+                    <connections>
+                        <segue destination="KB8-yv-Nvq" kind="relationship" relationship="window.shadowedContentViewController" id="fov-gw-znv"/>
+                    </connections>
+                </windowController>
+                <customObject id="4f4-a2-IV7" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-24" y="48"/>
+        </scene>
+        <!--Preferences View Controllerr-->
+        <scene sceneID="8y1-LV-ShN">
+            <objects>
+                <customObject id="S59-P9-s3E" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <viewController id="KB8-yv-Nvq" customClass="PreferencesViewControllerr" customModule="Lorema" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="azi-0e-nXw">
+                        <rect key="frame" x="0.0" y="0.0" width="350" height="234"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="V81-WR-6J2">
+                                <rect key="frame" x="18" y="198" width="314" height="16"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Lorem instruction" id="mD6-vt-nsa">
+                                    <font key="font" usesAppearanceFont="YES"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="hVB-kp-eSD">
+                                <rect key="frame" x="18" y="135" width="314" height="16"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Lora instruction" id="STq-nP-h6X">
+                                    <font key="font" usesAppearanceFont="YES"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" allowsExpansionToolTips="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Z9z-bj-DAL">
+                                <rect key="frame" x="20" y="171" width="310" height="21"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" title="lorem prefix" drawsBackground="YES" id="qoU-rO-R6I">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="I9u-Ip-0Za">
+                                <rect key="frame" x="20" y="106" width="310" height="21"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" title="lora prefix" drawsBackground="YES" id="j1V-0x-lUK">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="jpT-nW-iGh">
+                                <rect key="frame" x="18" y="70" width="314" height="16"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Error message" id="GSU-ga-dAH">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Jww-C9-uqN">
+                                <rect key="frame" x="18" y="33" width="312" height="18"/>
+                                <buttonCell key="cell" type="check" title="Start at login" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="gr8-Vt-Nfe">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="toggleCheckbox:" target="KB8-yv-Nvq" id="Lch-qe-Fbf"/>
+                                </connections>
+                            </button>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Lck-GH-XRG">
+                                <rect key="frame" x="140" y="12" width="70" height="14"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="App verision" id="BlC-zr-aZj">
+                                    <font key="font" metaFont="smallSystem"/>
+                                    <color key="textColor" name="systemGrayColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="I9u-Ip-0Za" secondAttribute="trailing" constant="20" id="41I-Vg-alB"/>
+                            <constraint firstItem="Z9z-bj-DAL" firstAttribute="top" secondItem="V81-WR-6J2" secondAttribute="bottom" constant="6" id="6gd-AH-kfS"/>
+                            <constraint firstItem="Lck-GH-XRG" firstAttribute="centerX" secondItem="azi-0e-nXw" secondAttribute="centerX" id="7ts-fJ-w2I"/>
+                            <constraint firstItem="V81-WR-6J2" firstAttribute="top" secondItem="azi-0e-nXw" secondAttribute="top" constant="20" id="EFI-GS-l2G"/>
+                            <constraint firstAttribute="trailing" secondItem="jpT-nW-iGh" secondAttribute="trailing" constant="20" id="FuA-lb-PQl"/>
+                            <constraint firstItem="Jww-C9-uqN" firstAttribute="leading" secondItem="azi-0e-nXw" secondAttribute="leading" constant="20" id="Jot-R7-Cig"/>
+                            <constraint firstItem="I9u-Ip-0Za" firstAttribute="leading" secondItem="azi-0e-nXw" secondAttribute="leading" constant="20" id="Lco-Mw-zjj"/>
+                            <constraint firstAttribute="trailing" secondItem="Z9z-bj-DAL" secondAttribute="trailing" constant="20" id="Ptd-YL-N1m"/>
+                            <constraint firstItem="jpT-nW-iGh" firstAttribute="leading" secondItem="azi-0e-nXw" secondAttribute="leading" constant="20" id="SMb-8Q-RUo"/>
+                            <constraint firstItem="jpT-nW-iGh" firstAttribute="top" secondItem="I9u-Ip-0Za" secondAttribute="bottom" constant="20" id="SdQ-4x-Dcw"/>
+                            <constraint firstItem="hVB-kp-eSD" firstAttribute="leading" secondItem="azi-0e-nXw" secondAttribute="leading" constant="20" id="Yqm-EM-mEr"/>
+                            <constraint firstAttribute="bottom" secondItem="Lck-GH-XRG" secondAttribute="bottom" constant="12" id="dYH-g1-JX2"/>
+                            <constraint firstItem="hVB-kp-eSD" firstAttribute="top" secondItem="Z9z-bj-DAL" secondAttribute="bottom" constant="20" id="fCw-L1-bgp"/>
+                            <constraint firstItem="V81-WR-6J2" firstAttribute="leading" secondItem="azi-0e-nXw" secondAttribute="leading" constant="20" id="guA-hX-vXi"/>
+                            <constraint firstAttribute="trailing" secondItem="V81-WR-6J2" secondAttribute="trailing" constant="20" id="ibI-Ij-xbl"/>
+                            <constraint firstItem="I9u-Ip-0Za" firstAttribute="top" secondItem="hVB-kp-eSD" secondAttribute="bottom" constant="8" id="j9r-ES-QHk"/>
+                            <constraint firstAttribute="trailing" secondItem="hVB-kp-eSD" secondAttribute="trailing" constant="20" id="pCs-eX-QAt"/>
+                            <constraint firstAttribute="trailing" secondItem="Jww-C9-uqN" secondAttribute="trailing" constant="20" id="sgc-Xd-rs1"/>
+                            <constraint firstItem="Z9z-bj-DAL" firstAttribute="leading" secondItem="azi-0e-nXw" secondAttribute="leading" constant="20" id="tXy-fD-kQA"/>
+                            <constraint firstItem="Jww-C9-uqN" firstAttribute="top" secondItem="jpT-nW-iGh" secondAttribute="bottom" constant="20" id="yfm-GL-MKl"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="appVerision" destination="Lck-GH-XRG" id="igB-QS-gW5"/>
+                        <outlet property="errorMessage" destination="jpT-nW-iGh" id="e4e-s0-rYG"/>
+                        <outlet property="loraInput" destination="I9u-Ip-0Za" id="Hw5-0J-tOd"/>
+                        <outlet property="loremInput" destination="Z9z-bj-DAL" id="PKa-k6-sGK"/>
+                        <outlet property="prefixInstructionTextLora" destination="hVB-kp-eSD" id="NVZ-tY-zdR"/>
+                        <outlet property="prefixInstructionTextLorem" destination="V81-WR-6J2" id="Kdd-Wk-8VF"/>
+                        <outlet property="startAtLogin" destination="Jww-C9-uqN" id="ECR-IS-0Kg"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="518" y="30"/>
+        </scene>
+    </scenes>
+</document>

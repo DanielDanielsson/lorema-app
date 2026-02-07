@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="20037" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="20037"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="InstructionsView" customModule="Lorema" customModuleProvider="target">
+            <connections>
+                <outlet property="instructionLoraText" destination="3vu-JO-5R9" id="tWt-d9-iCK"/>
+                <outlet property="instructionLoremText" destination="9Cg-rX-DSh" id="dms-eZ-azW"/>
+                <outlet property="loraPrefix" destination="U2Z-DE-QoS" id="8Sx-Vk-rlA"/>
+                <outlet property="loraWordSpace" destination="oZ6-8v-5kk" id="L35-tm-a5L"/>
+                <outlet property="loremPrefix" destination="nco-1f-8FG" id="HI3-gP-S1s"/>
+                <outlet property="loremWordSpace" destination="DLt-97-nMu" id="C89-0h-BhM"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="c22-O7-iKe" customClass="InstructionsView" customModule="Lorema" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="310" height="120"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <stackView distribution="fill" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="159-ed-Oc4">
+                    <rect key="frame" x="60" y="71" width="190" height="16"/>
+                    <subviews>
+                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="nco-1f-8FG">
+                            <rect key="frame" x="-2" y="0.0" width="86" height="16"/>
+                            <textFieldCell key="cell" lineBreakMode="clipping" title="Lorem prefix" id="aKt-Vi-zrj">
+                                <font key="font" metaFont="systemBold"/>
+                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                            </textFieldCell>
+                        </textField>
+                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="DLt-97-nMu">
+                            <rect key="frame" x="88" y="0.0" width="104" height="15"/>
+                            <textFieldCell key="cell" lineBreakMode="clipping" title="loremwordsspace" id="6Y0-pq-WGM">
+                                <font key="font" metaFont="cellTitle"/>
+                                <color key="textColor" name="tertiaryLabelColor" catalog="System" colorSpace="catalog"/>
+                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                            </textFieldCell>
+                        </textField>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="DLt-97-nMu" firstAttribute="bottom" secondItem="nco-1f-8FG" secondAttribute="bottom" id="5Nl-IB-RU7"/>
+                    </constraints>
+                    <visibilityPriorities>
+                        <integer value="1000"/>
+                        <integer value="1000"/>
+                    </visibilityPriorities>
+                    <customSpacing>
+                        <real value="3.4028234663852886e+38"/>
+                        <real value="3.4028234663852886e+38"/>
+                    </customSpacing>
+                </stackView>
+                <stackView distribution="fill" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="enS-V4-Sgg">
+                    <rect key="frame" x="72" y="14" width="167" height="16"/>
+                    <subviews>
+                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="U2Z-DE-QoS">
+                            <rect key="frame" x="-2" y="0.0" width="74" height="16"/>
+                            <textFieldCell key="cell" lineBreakMode="clipping" title="Lora prefix" id="h3M-Hb-5P7">
+                                <font key="font" metaFont="systemBold"/>
+                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                            </textFieldCell>
+                        </textField>
+                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="oZ6-8v-5kk">
+                            <rect key="frame" x="76" y="0.0" width="93" height="15"/>
+                            <textFieldCell key="cell" lineBreakMode="clipping" title="lorawordsspace" id="rj9-KJ-yn4">
+                                <font key="font" metaFont="cellTitle"/>
+                                <color key="textColor" name="tertiaryLabelColor" catalog="System" colorSpace="catalog"/>
+                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                            </textFieldCell>
+                        </textField>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="oZ6-8v-5kk" firstAttribute="bottom" secondItem="U2Z-DE-QoS" secondAttribute="bottom" id="RCE-sZ-uPl"/>
+                        <constraint firstAttribute="bottom" secondItem="oZ6-8v-5kk" secondAttribute="bottom" id="dBU-HK-dzo"/>
+                    </constraints>
+                    <visibilityPriorities>
+                        <integer value="1000"/>
+                        <integer value="1000"/>
+                    </visibilityPriorities>
+                    <customSpacing>
+                        <real value="3.4028234663852886e+38"/>
+                        <real value="3.4028234663852886e+38"/>
+                    </customSpacing>
+                </stackView>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="9Cg-rX-DSh">
+                    <rect key="frame" x="102" y="92" width="107" height="16"/>
+                    <textFieldCell key="cell" lineBreakMode="clipping" title="Instruction lorem" id="b0r-jg-jzQ">
+                        <font key="font" usesAppearanceFont="YES"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="3vu-JO-5R9">
+                    <rect key="frame" x="107" y="35" width="96" height="16"/>
+                    <textFieldCell key="cell" lineBreakMode="clipping" title="Instruction lora" id="5rT-mS-4ff">
+                        <font key="font" usesAppearanceFont="YES"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+            </subviews>
+            <constraints>
+                <constraint firstItem="159-ed-Oc4" firstAttribute="centerX" secondItem="c22-O7-iKe" secondAttribute="centerX" id="4c9-hP-v14"/>
+                <constraint firstItem="159-ed-Oc4" firstAttribute="top" secondItem="9Cg-rX-DSh" secondAttribute="bottom" constant="5" id="QWM-An-LFL"/>
+                <constraint firstItem="enS-V4-Sgg" firstAttribute="centerX" secondItem="c22-O7-iKe" secondAttribute="centerX" id="b9V-Hs-awn"/>
+                <constraint firstItem="9Cg-rX-DSh" firstAttribute="centerX" secondItem="c22-O7-iKe" secondAttribute="centerX" id="ifC-hO-h4a"/>
+                <constraint firstItem="3vu-JO-5R9" firstAttribute="centerX" secondItem="c22-O7-iKe" secondAttribute="centerX" id="ne9-IR-yhF"/>
+                <constraint firstItem="enS-V4-Sgg" firstAttribute="top" secondItem="3vu-JO-5R9" secondAttribute="bottom" constant="5" id="ob5-8c-dK6"/>
+                <constraint firstItem="3vu-JO-5R9" firstAttribute="top" secondItem="159-ed-Oc4" secondAttribute="bottom" constant="20" id="qsf-p9-6gu"/>
+                <constraint firstItem="9Cg-rX-DSh" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" constant="12" id="w4y-qj-rkZ"/>
+            </constraints>
+            <point key="canvasLocation" x="173" y="116"/>
+        </customView>
+    </objects>
+</document>
