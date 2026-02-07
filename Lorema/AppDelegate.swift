@@ -1,5 +1,4 @@
 import Cocoa
-import ServiceManagement
 
 @main
 class AppDelegate: NSObject, NSApplicationDelegate {
@@ -47,13 +46,15 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         updateNibView(hasPermission: false)
     }
     
-    func updateNibView(hasPermission:Bool){
+    func updateNibView(hasPermission: Bool) {
         if let item = firstMenuItem {
-            
-            instructionsView = InstructionsView(frame: NSRect(x: 0.0, y: 0.0, width: 310.0, height: 120.0))
-            noPermissionView = NoPermissionView(frame: NSRect(x: 0.0, y: 0.0, width: 370.0, height: 200.0))
-            
-            item.view = hasPermission ? instructionsView : noPermissionView
+            if hasPermission {
+                instructionsView = InstructionsView(frame: NSRect(x: 0.0, y: 0.0, width: 310.0, height: 120.0))
+                item.view = instructionsView
+            } else {
+                noPermissionView = NoPermissionView(frame: NSRect(x: 0.0, y: 0.0, width: 370.0, height: 200.0))
+                item.view = noPermissionView
+            }
         }
     }
     
