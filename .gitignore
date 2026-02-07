@@ -1,0 +1,34 @@
+# Xcode
+.DS_Store
+xcuserdata/
+DerivedData/
+.build/
+*.xcodeproj/xcuserdata/
+*.xcodeproj/project.xcworkspace/xcuserdata/
+*.xcworkspace/xcuserdata/
+
+# SPM
+.swiftpm/xcode/package.xcworkspace/contents.xcworkspacedata
+.swiftpm/xcode/xcuserdata/
+Package.resolved
+
+# Build artifacts
+build/
+*.ipa
+*.dSYM.zip
+*.dSYM
+*.xcarchive
+
+# CocoaPods (not used but just in case)
+Pods/
+
+# Misc
+*.moved-aside
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
