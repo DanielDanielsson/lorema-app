@@ -1,10 +1,25 @@
-# Lorema
+<p align="center">
+  <img src=".github/assets/app-icon.png" width="128" height="128" alt="Lorema icon">
+</p>
 
-A macOS menu bar app that generates Lorem Ipsum text via keyboard shortcuts. Type a trigger word followed by a number and hit space to instantly insert placeholder text into any text field.
+<h1 align="center">Lorema</h1>
 
-## Why Lorem Ipsum?
+<p align="center">
+  Generate Lorem Ipsum text anywhere on macOS.<br>
+  Type a keyword, hit space, get placeholder text. That simple.
+</p>
 
-Lorem Ipsum is the standard placeholder text used by designers and developers when building layouts. Instead of switching to a website to copy/paste dummy text, Lorema lets you generate it inline, wherever you're typing.
+<p align="center">
+  <a href="#installation">Install</a> · <a href="#usage">Usage</a> · <a href="#permissions">Permissions</a>
+</p>
+
+## How it works
+
+Lorema sits in your menu bar and listens for trigger words as you type. When it detects a prefix followed by a number and a space, it replaces what you typed with generated placeholder text. Works in any app.
+
+<p align="center">
+  <img src=".github/assets/menubar.png" width="500" alt="Lorema menu bar">
+</p>
 
 ## Installation
 
@@ -27,55 +42,51 @@ The built app will be in `DerivedData/`. Move `Lorema.app` to `/Applications/`.
 
 ## Usage
 
-Lorema lives in your menu bar. Once running, type a trigger prefix followed by a word count and press **space** to generate text.
+### Lorem mode
 
-### Lorem mode (starts with "Lorem ipsum dolor sit amet,")
-
-```
-lorem50⎵  →  Generates 50 words starting with "Lorem ipsum dolor sit amet,"
-lorem10⎵  →  Generates 10 words starting with "Lorem ipsum dolor sit amet,"
-```
-
-### Random mode (random Latin words, no fixed start)
+Generates text starting with "Lorem ipsum dolor sit amet,"
 
 ```
-lora50⎵   →  Generates 50 random Latin words
-lora10⎵   →  Generates 10 random Latin words
+lorem20⎵  →  20 words of classic Lorem Ipsum
+lorem100⎵ →  100 words of classic Lorem Ipsum
 ```
 
-The prefixes (`lorem` and `lora`) are configurable in the Preferences window. Open it from the menu bar icon.
+### Random mode
 
-### Word limits
+Generates random Latin placeholder words.
 
-You can generate between 1 and 1000 words at a time.
+```
+lora20⎵   →  20 random Latin words
+lora100⎵  →  100 random Latin words
+```
+
+Generate between 1 and 1,000 words at a time.
+
+### Custom prefixes
+
+Both trigger words are configurable in Preferences (`⌘,`).
+
+<p align="center">
+  <img src=".github/assets/preferences.png" width="400" alt="Lorema preferences">
+</p>
 
 ## Permissions
 
 ### Accessibility access
 
-Lorema needs Accessibility permission to detect your keystrokes and insert generated text.
+Lorema needs Accessibility permission to detect keystrokes and insert text.
 
 1. Open **System Settings > Privacy & Security > Accessibility**
-2. Click the **+** button and add **Lorema**
+2. Click **+** and add **Lorema**
 3. Make sure the toggle is enabled
 
-### Allowing an unsigned app
+### Unsigned app warning
 
-Since Lorema is not signed with an Apple Developer certificate, macOS will block it on first launch.
+Lorema is not signed with an Apple Developer certificate, so macOS will block it on first launch.
 
-**To open it:**
-
-1. Right-click (or Control-click) on Lorema.app
-2. Select **Open** from the context menu
-3. Click **Open** in the dialog that appears
-
-Alternatively, go to **System Settings > Privacy & Security**, scroll down, and click **Open Anyway** next to the Lorema warning.
+**To open it:** Right-click Lorema.app and select **Open**, then click **Open** in the dialog. Alternatively, go to **System Settings > Privacy & Security** and click **Open Anyway**.
 
 You only need to do this once.
-
-## Launch at Login
-
-You can enable "Start Lorema at login" in the Preferences window.
 
 ## License
 
