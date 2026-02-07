@@ -1,10 +1,3 @@
-//
-//  NoPermissionView.swift
-//  Lorema
-//
-//  Created by Daniel Danielsson on 2022-04-29.
-//
-
 import Cocoa
 
 class InstructionsView: NSView, LoadableView {

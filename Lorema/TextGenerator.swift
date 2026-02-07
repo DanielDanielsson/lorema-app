@@ -1,10 +1,3 @@
-//
-//  TextGenerator.swift
-//  Lorema
-//
-//  Created by Daniel Danielsson on 2022-04-20.
-//
-
 import Foundation
 
 enum GenerationMode {

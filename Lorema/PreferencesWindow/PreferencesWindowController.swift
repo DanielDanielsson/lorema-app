@@ -1,10 +1,3 @@
-//
-//  PreferencesWindowController.swift
-//  Lorema
-//
-//  Created by Daniel Danielsson on 2022-05-22.
-//
-
 import Cocoa
 
 class PreferencesWindowController: NSWindowController, NSWindowDelegate {

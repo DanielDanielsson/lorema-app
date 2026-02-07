@@ -1,10 +1,3 @@
-//
-//  LoadableView.swift
-//  Lorema
-//
-//  Created by Daniel Danielsson on 2022-04-20.
-//
-
 import Cocoa
 
 protocol LoadableView: AnyObject {

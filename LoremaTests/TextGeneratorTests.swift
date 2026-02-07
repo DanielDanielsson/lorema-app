@@ -1,10 +1,3 @@
-//
-//  TextGeneratorTests.swift
-//  LoremaTests
-//
-//  Created by Daniel Danielsson on 2024-01-01.
-//
-
 import XCTest
 @testable import Lorema
 
